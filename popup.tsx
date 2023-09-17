@@ -31,9 +31,9 @@ function IndexPopup() {
       label: 'tab info',
     },
     {
-      key: 'phone number list',
+      key: 'phone_numbers',
       icon: <VideoCameraOutlined />,
-      label: 'nav 2',
+      label: 'phone numbers',
     },
     {
       key: '3',
@@ -42,7 +42,7 @@ function IndexPopup() {
     },
   ];
   // 当前选择的 option 的 key
-  const [currentOptionKey, setCurrentOptionKey] = useState('tab_info');
+  const [currentOptionKey, setCurrentOptionKey] = useState('phone_numbers');
 
   const {
     token: { colorBgContainer },
@@ -91,7 +91,7 @@ function IndexPopup() {
           }}
         >
           { currentOptionKey === 'tab_info' && <TabInfo tab={tab} setTab={setTab} /> }
-          { currentOptionKey === 'phone number list' && <PhoneNumberList /> }
+          { currentOptionKey === 'phone_numbers' && <PhoneNumberList /> }
         </Content>
       </Layout>
     </Layout>
